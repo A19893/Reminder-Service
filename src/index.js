@@ -8,16 +8,16 @@ const setupAndStartServer = async () => {
 
   app.use('/api', require('./routes'));
 
-  app.listen(PORT, async function () {
+  app.listen(PORT,function () {
     console.clear();
     console.log(`Server listening on port ${PORT}`);
 
-    sendBasicEmail(
-      'support@gmail.com',
-      "yasharora2678@gmail.com",
-      "This is a Teating Mail",
-      'This is a testing email, I hope you like the support!!'
-    )
+    // sendBasicEmail(
+    //   'support@gmail.com',
+    //   "yasharora2678@gmail.com",
+    //   "This is a Teating Mail",
+    //   'This is a testing email, I hope you like the support!!'
+    // )
   });
 };
 
