@@ -6,6 +6,15 @@
   "scripts": {
     "start":"node src/index.js",
     "dev":"nodemon src/index.js",
+    "db:create": "npx sequelize-cli db:create",
+    "db:drop": "npx sequelize-cli db:drop",
+    "up": "npx sequelize-cli db:migrate",
+    "undo": " npx sequelize-cli db:migrate:undo",
+    "undo:all": " npx sequelize-cli db:migrate:undo:all",
+    "seed": "npx sequelize-cli db:seed:all",
+    "seed:undo": " npx sequelize-cli db:seed:undo",
+    "seed:undo:all": " npx sequelize-cli db:seed:undo:all",
+    "status": "npx sequelize-cli db:migrate:status",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
