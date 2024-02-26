@@ -54,9 +54,23 @@ const updateEmailStatus = async(id, payload) => {
     throw error;
   }
 }
+
+const subscribeEvents = async(payload)=>{
+let {service, data} = payload;
+if(service == 'CREATE_TICKET'){
+  await createNotification(data)
+}
+else if(service == 'SEND_BASIC_EMAIL'){
+  await sendBasicEmail(data);
+}
+else{
+  console.log('No valid event recieved');
+}
+}
 module.exports = {
   sendBasicEmail,
   fetchPendingEmails,
   createNotification,
-  updateEmailStatus
+  updateEmailStatus,
+  subscribeEvents
 };
